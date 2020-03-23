@@ -3,3 +3,4 @@ yarn.lock
 vscode.bat
 # Local Netlify folder
 .netlify
+.now
