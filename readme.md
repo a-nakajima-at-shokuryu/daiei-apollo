@@ -7,6 +7,7 @@ GraphQLサーバー
 
 ```
 npx now 
+```
 
 #### REST API URL
 * [fastapi rest api site](http://tk2-232-25926.vs.sakura.ne.jp/docs)
