@@ -3,6 +3,12 @@
 
 GraphQLサーバー
 
+#### Zeit Now Deploy
+
+```
+npx now 
+
+#### REST API URL
 * [fastapi rest api site](http://tk2-232-25926.vs.sakura.ne.jp/docs)
 * [tablelist rest api](http://tk2-232-25926.vs.sakura.ne.jp/describe/tablelist)
 
@@ -11,7 +17,7 @@ GraphQLサーバー
 query {
   tableList {
     id 
-    name 
+    name
     title 
     filename 
   }
