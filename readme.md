@@ -5,6 +5,8 @@ GraphQLサーバー
 
 #### Zeit Now Deploy
 
+Zeid Nowに[デプロイ](https://daiei-apollo.aki323buri2.now.sh/)
+
 ```
 npx now 
 ```
