@@ -4,7 +4,7 @@ const HINZNSMST = 'hinznsmst';
 
 // 列名からプレフィックスを取り除く
 const trimPrefix = (row, columns) => columns.reduce((a, { prefix, name }) => {
-  a[name] = row[`${prefix}_${name}`];
+  a[name] = row[`${prefix}${prefix.length ? '_' : ''}${name}`];
   return a;
 }, {});
 
@@ -17,6 +17,22 @@ module.exports = {
     describe: async (_, { tablename }) => {
       return await TableList.describe(tablename);
     },
+
+    tranSummary: async (_, {
+      tablename, 
+      buscd, 
+      ymd, 
+    }) => {
+      const columns = [
+        { prefix: 'URI', name: 'AITCD' }, 
+        { prefix: 'URI', name: 'DENNO' }, 
+        { prefix: 'URI', name: 'KINGK' }, 
+        { prefix: '', name: 'KENSU' }, 
+      ];
+      const data = await TableList.tranSummary(tablename, buscd, ymd);
+
+      return data.map(row => trimPrefix(row, columns));
+    }, 
     
     tran: async (_, { 
       tablename, 

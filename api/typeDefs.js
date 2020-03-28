@@ -8,6 +8,12 @@ module.exports = gql`
 
     describe(tablename: String!): Describe!
 
+    tranSummary(
+      tablename: String!
+      buscd: String!
+      ymd: String!
+    ): [TranSummary!]
+
     tran(
       tablename: String!
       buscd: String!
@@ -51,6 +57,13 @@ module.exports = gql`
     size: String
     iskey: String 
     biko: String 
+  }
+
+  type TranSummary {
+    AITCD: String
+    DENNO: String
+    KENSU: String
+    KINGK: String
   }
 
   type Tran {

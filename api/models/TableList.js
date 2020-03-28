@@ -1,9 +1,10 @@
 const axios = require('axios');
 
-const HOSTNAME       = `http://tk2-232-25926.vs.sakura.ne.jp`;
-const TABLE_LIST_URL = `${HOSTNAME}/describe/tablelist`;
-const TRAN_URL       = `${HOSTNAME}/tran/urikaktrn`;
-const HINSYU_URL     = `${HOSTNAME}/hinsyu`;
+const HOSTNAME          = `http://tk2-232-25926.vs.sakura.ne.jp`;
+const TABLE_LIST_URL    = `${HOSTNAME}/describe/tablelist`;
+const TRAN_SUMMARY_URL  = `${HOSTNAME}/tran/urikaktrn/summary`;
+const TRAN_URL          = `${HOSTNAME}/tran/urikaktrn`;
+const HINSYU_URL        = `${HOSTNAME}/hinsyu`;
 
 const DESCRIBE_URL = `${HOSTNAME}/describe`;
 
@@ -25,6 +26,14 @@ module.exports = {
         }
       });
   },
+
+  async tranSummary(tablename, buscd, ymd) {
+    return await axios(TRAN_SUMMARY_URL, {
+      params: {
+        tablename, buscd, ymd, 
+      }, 
+    }).then(res => res.data);
+  }, 
   
   async tran(tablename, buscd, ymd, aitcd, denno) {
     return await axios(TRAN_URL, {
