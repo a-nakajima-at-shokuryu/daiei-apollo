@@ -26,6 +26,14 @@ module.exports = gql`
       offset: Int!
       chunk: Int!
     ): [Hinsyu!]!
+
+    urisaki(
+      buscd: String!
+    ): [Aitsak!]
+
+    kaisaki(
+      buscd: String!
+    ): [Aitsak!]
   }
 
   type Table {
@@ -195,5 +203,180 @@ module.exports = gql`
     CHUCD: String
     SBRCD: String
     USEFG: String
+  }
+
+  type Aitsak
+  {
+    USBKB: String
+    BUSCD: String
+    AITCD: String
+    GRPNO: String
+    MEISJ: String
+    SEISJ: String
+    MEISK: String
+    SEISK: String
+    ADRS1: String
+    ADRS2: String
+    ADRS3: String
+    ADRS4: String
+    ADRS5: String
+    YUBIN: String
+    TELNO: String
+    KENCD: String
+    YOSIN: String
+    GYSCD: String
+    TANCD: String
+    TANCH: String
+    SIMKB: String
+    KSBKB: String
+    KSHKB: String
+    SEQKB: String
+    BOBKB: String
+    TORKB: String
+    SQHKB: String
+    ZHSKB: String
+    SEIBO: String
+    INDXJ: String
+    INDXK: String
+    TSYMD: String
+    TEYMD: String
+    TOROK: String
+    MENTE: String
+    SHACD: String
+    BUMON: String
+    TANHO: String
+    SAGRP: String
+    GYSC1: String
+    TESSY: String
+    TESUM: String
+    TESKB: String
+    TESKS: String
+    TESKH: String
+    TESSR: String
+    TESKJ: String
+    CHUKB: String
+    TNLNK: String
+    TNYMD: String
+    TNMNT: String
+    JJOKY: String
+    HJOKY: String
+    GKIBO: String
+    GSTDY: String
+    GONER: String
+    GFUHY: String
+    GSRAI: String
+    GCMNT: String
+    BIKOU: String
+    GMEIS: String
+    GSEIS: String
+    GMEIF: String
+    GSEIF: String
+    ADRG1: String
+    ADRG2: String
+    ADRG3: String
+    ADRG4: String
+    ADRG5: String
+    YUBNG: String
+    TELNG: String
+    FAXNO: String
+    KENCG: String
+    GYOSN: String
+    GYGCD: String
+    GYSMA: String
+    GYSUB: String
+    HINM1: String
+    HINM2: String
+    HINM3: String
+    HINM4: String
+    HINM5: String
+    SGYMD: String
+    SEYMD: String
+    SIHON: String
+    NINZU: String
+    JOUJO: String
+    KEIFG: String
+    KYKKB: String
+    HOSFG: String
+    HOSNM: String
+    TNPKB: String
+    TORKG: String
+    KEIRE: String
+    BIKOG: String
+    JIGSU: String
+    JIGNM: String
+    INDXG: String
+    INDFG: String
+    NAMED: String
+    YOMID: String
+    YAKUD: String
+    ADRD1: String
+    ADRD2: String
+    ADRD3: String
+    ADRD4: String
+    ADRD5: String
+    YUBND: String
+    TELND: String
+    KENC2: String
+    SENEN: String
+    GAKOD: String
+    SOTSU: String
+    DNYMD: String
+    BIKOD: String
+    GTORO: String
+    GMENT: String
+    GSHAC: String
+    DKENC: String
+    KGYCD: String
+    KEIYM: String
+    KEIBK: String
+    HOSYM: String
+    HOSNA: String
+    HOSBK: String
+    TNPSY: String
+    TNPYM: String
+    TNPBK: String
+    OBEUM: String
+    OBEYM: String
+    KESAN: String
+    TOKUM: String
+    TOKYM: String
+    TOKBK: String
+    YOSBK: String
+    GYGC1: String
+    GYGS1: String
+    GYGS2: String
+    URLAD: String
+    SINYO: String
+    COMNT: String
+    KBNK1: String
+    KBNK2: String
+    KBNK3: String
+    KBNK4: String
+    KBNK5: String
+    KYAK1: String
+    KYAK2: String
+    KYAK3: String
+    KYAK4: String
+    KYAK5: String
+    KIRE1: String
+    KIRE2: String
+    KIRE3: String
+    KIRE4: String
+    KIRE5: String
+    KURI1: String
+    KURI2: String
+    KURI3: String
+    KURI4: String
+    KURI5: String
+    KKAB1: String
+    KKAB2: String
+    KKAB3: String
+    KKAB4: String
+    KKAB5: String
+    NBUSCD: String
+    KAMEINO: String
+    TORKEINO: String
+    KEINO: String
+    SYOCD: String
   }
 `;

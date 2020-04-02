@@ -1,6 +1,7 @@
 const TableList = require('./models/TableList');
 
 const HINZNSMST = 'hinznsmst';
+const AITSAKMST = 'aitsakmst';
 
 // 列名からプレフィックスを取り除く
 const trimPrefix = (row, columns) => columns.reduce((a, { prefix, name }) => {
@@ -54,6 +55,24 @@ module.exports = {
       const columns = describe.columns; 
 
       const data = await TableList.hinsyu(offset, chunk);
+      return data.map(row => trimPrefix(row, columns));
+    }, 
+
+    urisaki: async (_, { buscd }) => {
+      const tablename = AITSAKMST;
+      const describe = await TableList.describe(tablename);
+      const columns = describe.columns;
+
+      const data = await TableList.urisaki(buscd);
+      return data.map(row => trimPrefix(row, columns));
+    }, 
+
+    kaisaki: async (_, { buscd }) => {
+      const tablename = AITSAKMST;
+      const describe = await TableList.describe(tablename);
+      const columns = describe.columns;
+
+      const data = await TableList.kaisaki(buscd);
       return data.map(row => trimPrefix(row, columns));
     }, 
   }, 

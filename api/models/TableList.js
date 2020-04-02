@@ -5,6 +5,8 @@ const TABLE_LIST_URL    = `${HOSTNAME}/describe/tablelist`;
 const TRAN_SUMMARY_URL  = `${HOSTNAME}/tran/urikaktrn/summary`;
 const TRAN_URL          = `${HOSTNAME}/tran/urikaktrn`;
 const HINSYU_URL        = `${HOSTNAME}/hinsyu`;
+const URISAKI_URL        = `${HOSTNAME}/urisaki`;
+const KAISAKI_URL        = `${HOSTNAME}/kaisaki`;
 
 const DESCRIBE_URL = `${HOSTNAME}/describe`;
 
@@ -48,4 +50,12 @@ module.exports = {
       offset, chunk, 
     }).then(res => res.data);
   },  
+
+  async urisaki(buscd) {
+    return await axios(URISAKI_URL, { buscd }).then(res => res.data);
+  }, 
+
+  async kaisaki(buscd) {
+    return await axios(KAISAKI_URL, { buscd }).then(res => res.data);
+  }, 
 };
