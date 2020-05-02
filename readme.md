@@ -15,6 +15,66 @@ npx now
 * [fastapi rest api site](http://tk2-232-25926.vs.sakura.ne.jp/docs)
 * [tablelist rest api](http://tk2-232-25926.vs.sakura.ne.jp/describe/tablelist)
 
+**売り先一覧（新）**
+```graphql
+{
+  urisaki2 {
+  	AIT_USBKB
+  	AIT_BUSCD
+  	AIT_AITCD
+  	AIT_GRPNO
+  	AIT_MEISJ
+  	AIT_SEISJ
+  	AIT_MEISK
+  	AIT_SEISK
+  	AIT_ADRS1
+  	AIT_ADRS2
+  	AIT_ADRS3
+  	AIT_ADRS4
+  	AIT_ADRS5
+  	AIT_YUBIN
+  	AIT_TELNO
+  	AIT_KENCD
+  	AIT_YOSIN
+  }
+}
+```
+
+**在庫一覧取得**
+```graphql
+{
+  gzaikozan {
+  	GZA_HINCD
+  	HIZ_HINNM
+  	HIZ_SIZEN
+  	HIZ_YORYO
+  	HIZ_JURKB
+  	HIZ_IRISU
+  	GZA_HTANK
+  	GZA_ZAIKB
+  	GZA_ZSHNO
+  	GZA_NYKNO
+  	GZA_NSKKB
+  	GZA_NKYMD
+  	GZA_UPYMD
+  	GZA_MOTOK
+  	GZA_MKING
+  	GZA_GENZA
+  	GZA_JUCHU
+  	KAD_COPRM
+  	KAD_FCTRM
+  	GZA_GENCD
+  	GZA_KAKCD
+  	GZA_IKUCD
+  	GZA_TAICD
+  	GZA_KURCD
+  	TGEN_GENNM
+  	TKAK_GENNM
+  	TIKU_IKUNM
+  	TTAI_TAINM
+  }
+}
+
 **テーブルリスト取得**
 ```graphql
 query {

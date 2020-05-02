@@ -75,5 +75,14 @@ module.exports = {
       const data = await TableList.kaisaki(buscd);
       return data.map(row => trimPrefix(row, columns));
     }, 
+
+    urisaki2: async(_parent, _args) => {
+      const data = await TableList.urisaki2();
+      return data;
+    }, 
+    gzaikozan: async(_parent, _args) => {
+      const data = await TableList.gzaikozan();
+      return data;
+    }, 
   }, 
 };

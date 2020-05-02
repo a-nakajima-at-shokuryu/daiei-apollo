@@ -7,6 +7,8 @@ const TRAN_URL          = `${HOSTNAME}/tran/urikaktrn`;
 const HINSYU_URL        = `${HOSTNAME}/hinsyu`;
 const URISAKI_URL        = `${HOSTNAME}/urisaki`;
 const KAISAKI_URL        = `${HOSTNAME}/kaisaki`;
+const URISAKI2_URL        = `${HOSTNAME}/urisaki2`;
+const GZAIKOZAN_URL        = `${HOSTNAME}/gzaikozan`;
 
 const DESCRIBE_URL = `${HOSTNAME}/describe`;
 
@@ -57,5 +59,13 @@ module.exports = {
 
   async kaisaki(buscd) {
     return await axios(KAISAKI_URL, { buscd }).then(res => res.data);
+  }, 
+
+  async urisaki2() {
+    return await axios(URISAKI2_URL).then(res => res.data);
+  }, 
+
+  async gzaikozan() {
+    return await axios(GZAIKOZAN_URL).then(res => res.data);
   }, 
 };
